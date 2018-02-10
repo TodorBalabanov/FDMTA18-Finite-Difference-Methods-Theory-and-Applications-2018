@@ -31,7 +31,7 @@ acad. Georgi Bonchev Str, block 2, office 514, 1113 Sofia, Bulgaria \\
 
 \begin{abstract}
 
-Artificial neural networks are well known and widely used from decades. One of the most popular kinds in the multilayer perceptron (MLP). Its general characteristic is that it has more than one layer. The most used topology of MLP has three layers (input, hidden and output). Layers are fully-connected between each other (the input with the hidden and the hidden with the output). The general disadvantage of this topology is that it does not has recurrent connections. Also the common usage of MLP is for single task solving. This research addresses these two common features of the MLP. Two MLPs are modified in such way that they share common hidden layer. Both MPLs have the task to forecast currency values (EUR/USD for the first one and JPY/USD for the second one). The lack of recurrent connections is solved by pairing each of the MLPs with another two MPLs. Pairs are done in such way that the output of the single MPL is take as input for its pairing MPL and the output of the pairing MPL is supplied at the original input. By such structure of four MPLs knowledge transfer is achieved by the shared hidden layer and short term memory is presented by the pairs. 
+Artificial neural networks (ANN) are well known and widely used from decades. One of the most popular kinds in the multilayer perceptron (MLP). Its general characteristic is that it has more than one layer. The most used topology of MLP has three layers (input, hidden and output). Layers are fully-connected between each other (the input with the hidden and the hidden with the output). The general disadvantage of this topology is that it does not has recurrent connections. Also the common usage of MLP is for single task solving. This research addresses these two common features of the MLP. Two MLPs are modified in such way that they share common hidden layer. Both MPLs have the task to forecast currency values (EUR/USD for the first one and JPY/USD for the second one). The lack of recurrent connections is solved by pairing each of the MLPs with another two MPLs. Pairs are done in such way that the output of the single MPL is take as input for its pairing MPL and the output of the pairing MPL is supplied at the original input. By such structure of four MPLs knowledge transfer is achieved by the shared hidden layer and short term memory is presented by the pairs. 
 
 \keywords{artificial neural networks, multilayer perceptron, topologies}
 \end{abstract}
@@ -40,11 +40,13 @@ Artificial neural networks are well known and widely used from decades. One of t
 %   Paper
 %----------------------------------------------------------------------------------------
 
-\section{Introduction}
+\section{Introduction} \label{Introduction}
 
-MLP is one of the most popular ANN variation. 
+A general description of classical ANN is weighted directed graph. Networks usually consists of neurons and connections between them. The way in which neurons are connected between each other is called topology of the network. There are many topologies, but MLP is one of the most popular. As its name implies, MLP consists of layers. Many layers can be used in MLP, but the simplest variant is with three layers. Neurons in a neighbouring layers are fully connected usually. It means that each neuron in one layer has connections to all neurons of the neighbouring layer. The neurons in the input layer are connected with the external for the ANN world. In a similar way the output neurons are connected with the external for the ANN world. In the classical MLP networks the information goes from the input to the output. Such networks does not have feedback connections. Sometimes information can travel backward depending of the training algorithm. Such case is backpropagation training where ANN total error is distributed backward in order ANN weights to be adjusted. If MLP is accepted as monolite base more advanced topologies can be created. In this study MLPs sharing of the hidden layer is proposed. Such hidden layer sharing allows knowledge transfer between MPLs. Pairing of MLPs is also proposed in such way in which recurrent connections to be used and effect of ANN memory to be achieved. The proposed topology is very proper for big data analysis of time series \cite{atanasova01}. The paper is organized as follows: Section \ref{Introduction} introduces the problem. Section \ref{Conclusions} concludes and some further ideas for research are pointed.
 
-\section{Conclusions}
+\section{Conclusions} \label{Conclusions}
+
+MLP based topologies can be very promising for financial time series forecasting. As further research this approach can be combined with Kalman Filter \cite{alexandrov01} or Generalized Nets \cite{tashev01,tashev02}. The effectiveness of the hidden layer sharing can be improved by permutation of the neurons as it is described in \cite{zankinski02}. ANN training in a distributed computing, as described in \cite{balabanov01,balabanov02,balabanov03,balabanov04,keremedchiev01,tomov01}, is also an interesting direction of further research. MLP neurons activation function is another direction of further research, as described in \cite{zankinski01}.
 
 %----------------------------------------------------------------------------------------
 %   Acknowledgements
@@ -64,13 +66,9 @@ This work was supported by private funding of Velbazhd Software LLC.
 
 \bibitem{atanasova01} Atanasova, T., Barova, M., Balabanov, T., \textit{Use of Neural Models for Analysis of Time Series in Big Data}, Publishing complex of "Vasil Levski" National Military University, ISSN 1314-1937, 193--198, 2016.
 
-\bibitem{atanasova02} Atanasova, T., Atanasov, J., \textit{Business Processes Traceability in SME by Barcode System}, Proceedings of the International Scientific Conference, UNITECH’16, Gabrovo, Bulgaria, ISSN 1313-230X,  207--212, 2016.
-
-\bibitem{awad01} Awad, M., \textit{Optimization RBFNNs Parameters using Genetic Algorithms: Applied on Function Approximation}, International Journal of Computer Science and Security, vol. 4, issue 3, ISSN 1985-1553, 295--307, 2010.
-
 \bibitem{balabanov01} Balabanov, T., Genova, K., \textit{Distributed System for Artificial Neural Networks Training Based on Mobile Devices}, Proceedings of the International Conference Automatics and Informatics, Sofia, Bulgaria, Federation of the Scientific Engineering Unions John Atanasoff Society of Automatics and Informatics, ISSN 1313-1850, 49--52, 2016.
 
-\bibitem{balabanov02} Balabanov, T., Keremedchiev, D., Goranov, I., \textit{Web Distributed Computing For Evolutionary Training Of Artificial Neural Networks}, International Conference InfoTech, Varna - St. St. Constantine and Elena resort, Bulgaria, Publishing House of Technical University - Sofia, ISSN 1314-1023, 210--216, 2016.
+\bibitem{balabanov02} Balabanov, T., Keremedchiev, D., Goranov, I., \textit{Web Distributed Computing for Evolutionary Training of Artificial Neural Networks}, International Conference InfoTech, Varna - St. St. Constantine and Elena resort, Bulgaria, Publishing House of Technical University - Sofia, ISSN 1314-1023, 210--216, 2016.
 
 \bibitem{balabanov03} Balabanov, T., Zankinski, I., Barova, M., \textit{Strategy for Individuals Distribution by Incident Nodes Participation in Star Topology of Distributed Evolutionary Algorithms}, Cybernetics and Information Technologies, Institute of Information and Communication Technologies - BAS, vol. 16, no. 1, ISSN 1311-9702, 80--88, 2016.
 
