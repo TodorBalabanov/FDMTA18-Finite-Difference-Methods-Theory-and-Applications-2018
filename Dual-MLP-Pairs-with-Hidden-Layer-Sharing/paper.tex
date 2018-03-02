@@ -42,21 +42,30 @@ Artificial neural networks (ANN) are well known and widely used from decades. On
 
 \section{Introduction} \label{Introduction}
 
-A general description of classical ANN is weighted directed graph. Networks usually consists of neurons and connections between them. The way in which neurons are connected between each other is called topology of the network. There are many topologies, but MLP is one of the most popular. As its name implies, MLP consists of layers. Many layers can be used in MLP, but the simplest variant is with three layers. Neurons in a neighbouring layers are fully connected usually. It means that each neuron in one layer has connections to all neurons of the neighbouring layer. The neurons in the input layer are connected with the external for the ANN world. In a similar way the output neurons are connected with the external for the ANN world. In the classical MLP networks the information goes from the input to the output. Such networks does not have feedback connections. Sometimes information can travel backward depending of the training algorithm. Such case is backpropagation training where ANN total error is distributed backward in order ANN weights to be adjusted. If MLP is accepted as monolite base more advanced topologies can be created. In this study MLPs sharing of the hidden layer is proposed. Such hidden layer sharing allows knowledge transfer between MPLs. Pairing of MLPs is also proposed in such way in which recurrent connections to be used and effect of ANN memory to be achieved. The proposed topology is very proper for big data analysis of time series \cite{atanasova01}. The paper is organized as follows: Section \ref{Introduction} introduces the problem. Section \ref{Conclusions} concludes and some further ideas for research are pointed.
+A general description of classical ANN is weighted directed graph. Networks usually consists of neurons and connections between them. The way in which neurons are connected between each other is called topology of the network. There are many topologies, but MLP is one of the most popular. As its name implies, MLP consists of layers. Many layers can be used in MLP, but the simplest variant is with three layers. Neurons in a neighbouring layers are fully connected usually. It means that each neuron in one layer has connections to all neurons of the neighbouring layer. The neurons in the input layer are connected with the external for the ANN world. In a similar way the output neurons are connected with the external for the ANN world. In the classical MLP networks the information goes from the input to the output. Such networks does not have feedback connections. Sometimes information can travel backward depending of the training algorithm. Such case is backpropagation training where ANN total error is distributed backward in order ANN weights to be adjusted. If MLP is accepted as monolite base more advanced topologies can be created. In this study MLPs sharing of the hidden layer is proposed. Such hidden layer sharing allows knowledge transfer between MPLs. Pairing of MLPs is also proposed in such way in which recurrent connections to be used and effect of ANN memory to be achieved. The proposed topology is very proper for big data analysis of time series \cite{atanasova01}. The paper is organized as follows: Section \ref{Introduction} introduces the problem; Section \ref{Topology Proposition} presents an ANN topology proposition; Section \ref{Experiments} gives some experiment details; Section \ref{Conclusions} concludes and some further ideas for research are pointed.
 
-\section{Experiments} \label{Experiments}
+\section{Topology Proposition} \label{Topology Proposition}
 
 \begin{figure}
   \includegraphics[width=1.0\linewidth]{fig01}
-  \caption{Currencies values for two months on daily basis - EUR/USD currency pair.}
+  \caption{MLP pairs with hidden layer sharing.}
   \label{fig01}
 \end{figure}
 \FloatBarrier
 
+\section{Experiments} \label{Experiments}
+
 \begin{figure}
   \includegraphics[width=1.0\linewidth]{fig02}
-  \caption{Currencies values for two months on daily basis - JPY/USD currency pair.}
+  \caption{Currencies values for two months on daily basis - EUR/USD currency pair.}
   \label{fig02}
+\end{figure}
+\FloatBarrier
+
+\begin{figure}
+  \includegraphics[width=1.0\linewidth]{fig03}
+  \caption{Currencies values for two months on daily basis - JPY/USD currency pair.}
+  \label{fig03}
 \end{figure}
 \FloatBarrier
 
