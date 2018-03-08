@@ -46,6 +46,8 @@ A general description of classical ANN is weighted directed graph. Networks usua
 
 \section{Topology Proposition} \label{Topology Proposition}
 
+A common disadvantage of the classical MLP is that it has no backward links. Due to the lack of such links there is no short term memory presented in such ANN topology. 
+
 \begin{figure}
   \includegraphics[width=1.0\linewidth]{fig01}
   \caption{MLP pairs with hidden layer sharing.}
@@ -53,7 +55,11 @@ A general description of classical ANN is weighted directed graph. Networks usua
 \end{figure}
 \FloatBarrier
 
+If simple MLP are taken as building blocks of a more complex ANN a variation of short term memory can be implemented (Fig. \ref{fig01}). The model proposed in this study uses four simple MLPs. The hidden layers of the two major MPLs are merged in a bigger shared layer. Such modification of the topology gives a way in which the information from the left MPL to travel in the right MPL and vice versa. Two other supportive MPLs are connected at the output of the major MPLs. The task of the supportive MPLs is to return some part of the signal at the input of the ANN structure. The output of the supportive MPLs is supplied at the shared hidden layer. As expected values on the supportive MPLs the input for major MPLs is used. 
+
 \section{Experiments} \label{Experiments}
+
+The experiments are done with Encog Neural Networks Framework for Java.
 
 \begin{figure}
   \includegraphics[width=1.0\linewidth]{fig02}
@@ -62,9 +68,13 @@ A general description of classical ANN is weighted directed graph. Networks usua
 \end{figure}
 \FloatBarrier
 
+As input data currencies values are used. One half of the ANN is supplied with EUR/USD values (Fig. \ref{fig02}). The other half of the ANN is supplied with USD/JPY values (Fig. \ref{fig03}). All data are normalized according the activation function levels. Data are separated in three sets: training (75\%), testing (20\%) and validation (25\%).  Validation set appears to be the most important part of the training, because according it the forecasting capabilities of the ANN are evaluated.
+
+It is clearly visible (Fig. \ref{fig02} and Fig. \ref{fig03}) that the US economy is very related with the EU and Japanese economies. From forecasting point of view it is interesting that the correlation between both charts is negative. When EUR graph goes up the JPY graph goes down. It is something which ANN should learn and use effectively in the shared hidden layer. 
+
 \begin{figure}
   \includegraphics[width=1.0\linewidth]{fig03}
-  \caption{Currencies values for two months on daily basis - JPY/USD currency pair.}
+  \caption{Currencies values for two months on daily basis - USD/JPY currency pair.}
   \label{fig03}
 \end{figure}
 \FloatBarrier
