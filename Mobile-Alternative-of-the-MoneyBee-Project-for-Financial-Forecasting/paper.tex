@@ -1,6 +1,7 @@
 \documentclass{llncs}
 
 \usepackage{graphicx}
+\usepackage{placeins}
 
 \begin{document}
 
@@ -44,11 +45,22 @@ Financial time series forecasting with the usage of artificial neural networks (
 
 \section{Technical Proposition} \label{Technical Proposition}
 
+In its nature the technical solution is client-server based software architecture (Fig. \ref{fig01}). High cost effective choice on the server side is the combination of MySQL, is relational database management system, and PHP, as server side scripting language. Both tools are open source and widely available in shared web hosting offerings. Hypertext transfer protocol (HTTP) is one of the most used protocols used in the last two decades for information exchange. The proposed solution uses HTTP in combination with JavaScript object notation (JSON) for structured information exchange. The client side is implemented as Android live wallpaper service. By this way ANN training goes in background and it does not affect the regular usage of the mobile device. For representation of the ANN structure into device memory Encog machine learning framework is used in its Java version. The training of ANN is combination of backpropagation and GA/DE heuristics implemented with Apache commons genetic algorithm library. HTTP communication on the client side is handled with Apache HTTP components library. 
+
+\begin{figure}
+  \includegraphics[width=1.0\linewidth]{fig01}
+  \caption{Stack of the used technologies.}
+  \label{fig01}
+\end{figure}
+\FloatBarrier
+
+It is very common in distributed computing systems communications between server and the clients not to be permanent. When there is large amount of calculations packed in a single remote job there is no need of network communication until the job is finished.
+
 \section{Experiments} \label{Experiments}
 
 \section{Conclusions} \label{Conclusions}
 
-The success of MoneyBee project (German Federal Ministry of Economy's Multimedia Award Foerderpreis Gruendungswettbewerb Multimedia 1999 in Berlin, and the Shortlist 10 Best Ideas at the innovations contest CyberOne 2000 in Stuttgart) can be effectively persecuted with the capabilities of the modern mobile devices. With the modern programming languages and machine learning frameworks donated distributed computing systems can be developed on very cost effective manner. As further research mobile donated distributed computing can be experimented with the concept of the generalized nets \cite{tashev01,tashev02} or extended Kalman filters \cite{alexandrov01}.
+The success of MoneyBee project (German Federal Ministry of Economy's Multimedia Award Foerderpreis Gruendungswettbewerb Multimedia 1999 in Berlin and the Shortlist 10 Best Ideas at the innovations contest CyberOne 2000 in Stuttgart) can be effectively persecuted with the capabilities of the modern mobile devices. With the modern programming languages and machine learning frameworks donated distributed computing systems can be developed on very cost effective manner. As further research mobile donated distributed computing can be experimented with the concept of the generalized nets \cite{tashev01,tashev02} or extended Kalman filters \cite{alexandrov01}.
 
 %----------------------------------------------------------------------------------------
 %   Acknowledgements
